@@ -1,2 +1,1 @@
-# Learn-Tyler-Potts-JavaScriptTo-Do-List-App
-Learn how to create a to-do list app 
+This tutorial is to teach me how to create a basic to-do application using Javascript. The main focus is to learn the Javascript in this tutorial. I will be adding a text file that will break down what each line of code is doing in my own words to ensure that I am extracting the most value I can from this tutorial. 
