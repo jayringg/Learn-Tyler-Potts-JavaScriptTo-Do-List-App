@@ -1,0 +1,84 @@
+                                                                                     JavaScript To-Do List How It Works
+
+1  Create a window event listener that waits for the entire page to load before starting a function that will run the rest of the code. 
+
+2  Create 3 constant variables form, input and list_el each one using query selector to grab the html form, input and div respectively. 
+
+3  Add an event listener to the form that stops the forms default refresh on submit, do this using an arrow funtion and preventDefault which will prohibit the default funtion of the form submission. 
+
+4  Inside of the form function create a constant variable named task that takes the value from the form input. 
+
+5  Create and if statement that alerts a message to fill out the task if the input is submitted empty. If form is submitted with data satisfying the terms then use return to exit out of the function.
+
+6  Create a constant variable named task_el that creates a new div element using document.createElement. 
+
+7  Take constant variable task_el and use classList.add to add the task input value to the new div we have created.
+
+Basic workings without edit and delete buttons 
+
+8  Const task_el = document.createElement("div"); - Create a constant variable named task_el this variable will create a div element.
+
+9  Task_el.classList.add("task"); - take the const variable task_el and give it a class name of "content" using .classList.add(""). The task div will include our task as well as our buttons to edit and delete.  
+
+10 Const task_content_el = document.createElement("div"); - create another constant variable named task_content_el that creates a div element
+
+11 Task_content_el.classList.add("content"); - take the const variable task_content_el and give it a class of "content" Our content div will contain our to-do input.
+
+12 Task-content_el.innerText = task; - take the variable task_content_el and make the inner text to the value of the variable task which will take the input value from the form input. 
+
+
+Div creation using append child - <div class = "task"></div> <div class = "content">text in here will = input.value</div> this will become <div id= "tasks"> - in html file
+                                                                                                                                           <div class = "task">
+                                                                                                                                           <div class = "content">text in here will = input.value</div>
+                                                                                                                                           </div>
+                                                                                                                                           </div> - in html file
+
+At this point I am not sure why we needed both div's task_el and task_content_el but I will assume it is needed for the next step. We need both div's so that tasks can hold our input as well as out buttons. 
+
+13 Task_el.appendChild(task_content_el); - we then take task_el and use appendChild to make task_content_el a child of task_el. 
+
+14 Finally we take list_el and appendChild task_el into our div in our html file where we will store our tasks. 
+
+15 Next we will create a constant variable named task_input_el and we will use document.createElement to create an input element. 
+
+16 Take task_input_el and we give it a class of "text". 
+
+17 Take task_input_el and give it a type of text
+
+18 Take task_input_el and give it a value of task which will take the input value from the user. 
+
+19 Take task_input_el and set the attribute to readonly so that it cannot be changed.  
+
+20 Take task_content_el use appendChild with task_input_el to make task_input_el a child of task_content_el.
+
+21 Line 14 has been relocated to this line to take list_el and appendChild task_el into our div in our html file where we will store our tasks.  
+
+22 Create a constant variable named task_actions_el use document.createElement to create another div. 
+
+23 Take task_actions_el and give it a class of "actions". 
+
+24 Create constant variable task_edit_el create a button element. 
+
+25 Take task_edit_el and give it a class of edit.
+
+26 Take task_edit_el and make the innerHTNL "Edit".
+
+27 Do all the same steps with a constant variable named task_delete_el to make a delete button. 
+
+28 Take task_actions_el and place task_edit_el inside of it using appendChild
+
+29 Then do the same with task_delete_el this allows us to have both of our buttons edit and delete next to eachother.
+
+30 Take task_el and place task_actions_el inside of it using append child. 
+
+31 Place task_el inside of list_el to display out divs on our page.
+
+32 Set input.value equal to an empty string so that each time the function runs it resets the input to have nothing inside. 
+
+33 Take task_edit_el and add a click event listener then use and arrow funtion and run an if statement. The if statement takes task_edit_el and asks if the innerText is set to lowercase and says "edit" if it is 
+
+then it takes task_input_el and removes the readonly attribute, it then focuses on the text input and changes the edit button to display the word Save.
+
+34 The function uses else to set the attribute back to readonly and changes the button back to display Edit. 
+
+35 Task_delete_el add an event listener to our delete buttion that listens for a click if clicked run a function that takes list_el and removes the child task_el which will delete our task. 
